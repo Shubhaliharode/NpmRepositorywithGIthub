@@ -1,0 +1,26 @@
+<h1 style="color: rgb(47, 148, 47)">if else block works!</h1>
+<article>
+    <table>
+        <tr>
+            <div *ngIf="1;else elsevalue">1</div>
+            <ng-template #elsevalue> condition false</ng-template>
+        </tr>
+        <tr>
+            <div *ngIf="show; then thenBlock else elseblock"></div>
+            <ng-template #thenBlock>kbc
+                <div *ngIf="value; else elsevalue">this is show and value true</div>
+                <ng-template #elsevalue>
+                    this is show true and value false
+                </ng-template>
+            </ng-template>
+            <ng-template #elseblock>
+                this is show false
+            </ng-template>
+        </tr>
+        <tr>
+
+            <div *ngIf="value; else thisvale">this is if statement</div>
+            <ng-template #thisvale>this is else block</ng-template>
+        </tr>
+    </table>
+</article>

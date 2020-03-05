@@ -1,0 +1,19 @@
+<h1 style="color: rgb(47, 148, 47)">if block works!</h1>
+<article>
+
+    <div *ngIf="show">this is true</div>
+    <ng-template [ngIf]="show">
+        <div>
+            this is true sentence
+        </div>
+    </ng-template>
+    <br>
+    <div *ngIf="name==='shubhali'">
+        shubhali
+    </div>
+    <br>
+    <div *ngIf="-1">
+        this If statement contain negative value
+    </div>
+    <div *ngIf="true">this If statement contain true value</div>
+</article>

@@ -1,0 +1,23 @@
+<h1 style="color: rgb(47, 148, 47)">forblock works!</h1>
+<nav>
+    <h2>For loop example</h2>
+    <table *ngFor="let nam of students">
+        <tr>
+            <td>{{nam.name}}</td>
+            <td>-</td>
+        </tr>
+        <tr *ngFor="let educations of nam.edu">
+            <td></td>
+            <td>{{educations}}</td>
+        </tr>
+    </table>
+</nav>
+<article><br>
+    <h2>Used if statement within for loop</h2>
+    <div *ngFor="let name of names">
+        <div *ngIf="name=='kajal';else elseb">priyanka</div>
+        <ng-template #elseb><br>
+            {{name}}</ng-template>
+    </div>
+</article>
+<div class="div1">hellow i am left</div>
