@@ -1,14 +1,51 @@
-/* table, td, tr {
-  border: 1px solid black;
-} */
-  article{
-      background: #ccc;
-  }
-/* table {
-  border-collapse: collapse;
-  width: 100%;
-} */
-
-/* tr {
-  height: 50px;
-} */
+* {
+  box-sizing: border-box;
+}
+.multicolortext{
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   
+      -webkit-background-clip: text;
+      -moz-background-clip: text; 
+      background-clip: text;
+      color: transparent;
+}
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.column1 {
+  float: left;
+  width: 30%;
+  padding: initial;
+  height: 100; /* Should be removed. Only for demonstration */
+}
+tr{
+  font-size: 20px;
+  display: inline-block;
+    box-shadow: 2px 2px 4px green;
+    width: 300px;
+    margin:5px;
+    
+    height: 55px;
+}
+.trs{
+      font-size: 20px;
+      display: inline-block;
+        box-shadow: 2px 2px 4px green;
+        width: 500px;
+        margin:5px;
+        height: 400px;
+}
+.abc{
+  background-color: #4CAF50;
+  font-size: 20px;
+  width:93px;
+  height:55px;
+}
+.abd{
+  background-color: rgb(211, 43, 13);
+  font-size: 20px;
+  width:93px;
+  height:55px;
+}

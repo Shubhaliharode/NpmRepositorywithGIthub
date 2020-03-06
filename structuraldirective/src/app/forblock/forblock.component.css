@@ -1,18 +1,31 @@
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-     
-  }}
-  article{
-      background: #ccc;
-  }
-  
-nav {
+* {
+  box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column {
   float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
+  width: 50%;
+  padding: 100px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.multicolortext{
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   
+      -webkit-background-clip: text;
+      -moz-background-clip: text; 
+      background-clip: text;
+      color: transparent;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+ul,table{display: inline-block;
+    box-shadow: 2px 2px 4px green;
+    list-style-type: circle;
+  width: 207px;
+  margin: 5px;
+  margin-left: 8px;
+    height: 142px;}

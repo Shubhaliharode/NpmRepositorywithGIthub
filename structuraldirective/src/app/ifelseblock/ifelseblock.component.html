@@ -1,26 +1,104 @@
-<h1 style="color: rgb(47, 148, 47)">if else block works!</h1>
-<article>
+<h1 class="multicolortext">if else block works!</h1>
+<div class="column">
+    <tr>
+        <div *ngIf="1;else elsevalue">1</div>
+        <ng-template #elsevalue> condition false</ng-template>
+    </tr>
+    <tr>
+        <div *ngIf="show; then thenBlock else elseblock"></div>
+        <ng-template #thenBlock>kbc
+            <div *ngIf="value; else elsevalue">this is show and value true</div>
+            <ng-template #elsevalue>
+                this is show true and value false
+            </ng-template>
+        </ng-template>
+        <ng-template #elseblock>
+            this is show false
+        </ng-template>
+    </tr>
+    <tr>
+
+        <div *ngIf="value; else thisvale">this is if statement</div>
+        <ng-template #thisvale>this is else block</ng-template>
+    </tr>
+    <tr>
+        <ng-container *ngIf="true;then thenblock else thisv">
+        </ng-container>
+        <ng-template #thenblock>this is true</ng-template>
+        <ng-template #thisv> this is false block</ng-template>
+    </tr>
+</div>
+<div class="column1">
     <table>
-        <tr>
-            <div *ngIf="1;else elsevalue">1</div>
-            <ng-template #elsevalue> condition false</ng-template>
-        </tr>
-        <tr>
-            <div *ngIf="show; then thenBlock else elseblock"></div>
-            <ng-template #thenBlock>kbc
-                <div *ngIf="value; else elsevalue">this is show and value true</div>
-                <ng-template #elsevalue>
-                    this is show true and value false
+        <div>
+            <td>
+                <button class="abc" (click)="show2()">Show code</button>
+            </td>
+            <td>
+                <button class="abd" (click)="reset()">hide code</button>
+            </td>
+            <td>
+
+                <!-- <table>
+                    <tr class="trs">{{str1}}</tr>
+                </table>  -->
+            </td>
+        </div>
+        <div>
+            <td>
+                <button class="abc" (click)="show3()">Show code</button>
+            </td>
+            <td>
+                <button class="abd" (click)="reset()">hide code</button>
+            </td>
+            <td>
+                <!-- <table>
+                    <tr class="trs">{{str2}}</tr>
+                </table> -->
+            </td>
+        </div>
+        <div>
+            <td>
+                <button class="abc" (click)="show4()">Show code</button>
+            </td>
+            <td>
+                <button class="abd" (click)="reset()">hide code</button>
+            </td>
+            <!-- <table>
+                <tr class="trs">{{str3}}</tr>
+            </table> -->
+        </div>
+        <div>
+            <td>
+                <button class="abc" (click)="show5()">Show code</button>
+            </td>
+            <td>
+                <button class="abd" (click)="reset()">hide code</button>
+            </td>
+            <!-- <table>
+                <tr class="trs">{{str4}}</tr>
+            </table> -->
+        </div>
+    </table>
+</div>
+<div>
+    <tr class="trs">
+        <ng-container *ngIf="flag1;then thenn else elsee"></ng-container>
+        <ng-template #thenn>{{str1}}</ng-template>
+        <ng-template #elsee>
+            <ng-container *ngIf="flag2;then thennn else elseee"></ng-container>
+            <ng-template #thennn>{{str2}}</ng-template>
+            <ng-template #elseee>
+                <ng-container *ngIf="flag3;then took else thistook"></ng-container>
+                <ng-template #took>
+                    {{str3}}
+                </ng-template>
+                <ng-template #thistook>
+                    <ng-container *ngIf="flag4;then yes else noelse"></ng-container>
+                    <ng-template #yes>{{str4}}</ng-template>
+                    <ng-template #noelse>click show code</ng-template>
                 </ng-template>
             </ng-template>
-            <ng-template #elseblock>
-                this is show false
-            </ng-template>
-        </tr>
-        <tr>
-
-            <div *ngIf="value; else thisvale">this is if statement</div>
-            <ng-template #thisvale>this is else block</ng-template>
-        </tr>
-    </table>
-</article>
+        </ng-template>
+    </tr>
+</div>
